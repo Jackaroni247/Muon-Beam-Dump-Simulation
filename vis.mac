@@ -1,0 +1,26 @@
+# ------------------------------------------------------
+# Macro file for visualising the Beam Dump Test
+# ------------------------------------------------------
+
+/run/numberOfThreads 15
+
+/run/initialize
+
+/vis/open OGL 600x600-0+0
+
+/vis/drawVolume
+
+/vis/viewer/set/viewpointVector 1 1 1
+/vis/viewer/zoom 1.5
+
+/vis/geometry/set/visibility World 0 false
+
+/vis/geometry/set/colour BeamDump 0 0.0 0.0 1.0 0.3
+
+/vis/scene/add/trajectories smooth
+
+/vis/scene/endOfEventAction accumulate
+
+/vis/scene/add/axes 0 0 0 2 m
+
+/run/beamOn 1
